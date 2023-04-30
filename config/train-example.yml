@@ -1,0 +1,38 @@
+# mode: modling| train
+mode: train
+
+### "mode = train": Files required for power modeling flow
+
+
+# dataset-path: Output path of calibration models using all training samples
+dataset-path: boom-data/train_data
+
+# results-path: Output path of calibration models and evaluation results
+results-path: boom-data/train_results
+
+# dynamic-calib-model: Dynamic power calibration model
+dynamic-calib-model: "XGBRegressor"
+
+# leakage-calib-model: Leakage power calibration model
+leakage-calib-model: "PolySVR"
+
+# feature-num: Number of features to be selected for feature selection
+feature-num: 17
+
+# sampling-percentage: Percentage of samples to label for simulate AL sampling
+sampling-percentage: 0.7
+
+
+### "mode = modeling": Files required for power modeling flow
+# gem5-config-path: Input config.json from Gem5 output
+gem5-config-path: boom-data/smallboom/dhrystone/m5out/config.json
+
+# gem5-stats-path: Input stats.txt from Gem5 output
+gem5-stats-path: boom-data/smallboom/dhrystone/m5out/stats.txt
+
+# xml-template-path: Template XML file
+xml-template-path: boom-data/smallboom/smallboom-template.xml
+
+# modleing-output-path: Template XML file
+modleing-output-path: boom-data/smallboom/dhrystone
+
