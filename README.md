@@ -25,13 +25,16 @@ $ cd ..
 
 1. If you want to use the power model we have trained for the RISC-V BOOM processor, please set "mode: estimation" and provide the "config.json" and "stats.txt" obtained from Gem5 simulation, as well as the "template.xml" required for gem5-to-mcpat-parser, for example:
 ```sh
-$ python main.py -c config/modeling-example.yml
+$ python main.py -c config/estimation-example.yml
 ```
 
-2. If you want to calibrate a new model for another CPU design (or use the proposed power modeling methods), set "mode: train"  and provide the required training data, for example:
+2. If you want to calibrate a new model for another CPU design (or use the proposed power modeling methods), set "mode: train"  and provide the required training data (refer to boom-data/train_data/*), for example:
 ```sh
 $ python main.py -c config/train-example.yml
 ```
+
+### ToDo
+Update the Python environment dependencies and refine the documentation.
 
 
 ### Reference
